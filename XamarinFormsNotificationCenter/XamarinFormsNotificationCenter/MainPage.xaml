@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:XamarinFormsNotificationCenter"
+             x:Class="XamarinFormsNotificationCenter.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Entry Text="{Binding NotificationText}" Placeholder="Write a notification message.." ClearButtonVisibility="WhileEditing" FontSize="Large" />
+        <Button Text="Send notification" Command="{Binding SendNotification}" />
+    </StackLayout>
+
+</ContentPage>
